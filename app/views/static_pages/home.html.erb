@@ -1,8 +1,15 @@
-<% provide(:title, 'Home') %>
-<h1>Medicare BS</h1>
-<p>
-  This is the homepage for <a href="http://intense-tor-4235.herokuapp.com//">Medicare BS</a>.
-  A project to make PT/OT/SLP Tests magically turn into G Codes and Modifiers.
-  This
-  is the first application for this project.
-</p>
+<div class="center hero-unit">
+  <h1>Welcome to Medicare BS</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="http://railstutorial.org/">Medicare BS</a>
+     application.
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
