@@ -1,4 +1,6 @@
 MedicareBs::Application.routes.draw do
+  get "gcodes/new"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
