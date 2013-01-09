@@ -1,5 +1,5 @@
 def full_title(page_title)
-  base_title = "Medicare BS"
+  base_title = "Medicare Coding Crosswalk"
   if page_title.empty?
     base_title
   else

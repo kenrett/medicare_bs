@@ -11,5 +11,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def gtests
+  end
   
 end

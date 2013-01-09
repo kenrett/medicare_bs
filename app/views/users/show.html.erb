@@ -4,8 +4,18 @@
     <section>
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <p>Welcome <%= @user.name %>!</p>
       </h1>
+</div>      
+  		
+<div class = "center">
+	<h1>Gtests</h1>	
+	<br></br>
+  		<h2>Please click the button below to get started!</h2>
+
+		<p>
+  		<%= link_to "Let's run some tests!", gtests_path, class: "btn btn-large btn-primary" %>
+		</p>	
     </section>
   </aside>
 </div>
