@@ -1,0 +1,86 @@
+<% provide(:title, 'All gtests') %>
+<style>
+.hide{
+  display:none
+}
+</style>
+<h1>All gtests</h1>
+
+<table id=db border=1>
+  <tr>
+    <th>Test Name</th>
+    <th class=hide>CH</th>
+    <th class=hide>CI</th>
+    <th class=hide>CJ</th>
+    <th class=hide>CK</th>
+    <th class=hide>CL</th>
+    <th class=hide>CM</th>
+    <th class=hide>CN</th>
+  </tr>
+
+<% @gtests.each do |gtest| %>
+  <tr>
+    <td><a href=#><%= gtest.test_name %></a></td>
+    <td class=hide><%= gtest.ch %></td>
+    <td class=hide><%= gtest.ci %></td>
+    <td class=hide><%= gtest.cj %></td>
+    <td class=hide><%= gtest.ck %></td>
+    <td class=hide><%= gtest.cl %></td>
+    <td class=hide><%= gtest.cm %></td>
+    <td class=hide><%= gtest.cn %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<hr>
+
+Score:
+<input id=score type=text></input>
+<button id=submit>Submit</button>
+
+<hr>
+
+Modifier: <input type=text id=result readonly></input>
+
+<hr>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+var test_selected = 0;
+function test_selection_handler(event) {
+  test_selected = event.data;
+  // Returning false cancels event propagation, so the browser will not
+  // try to go to "#" or wherever href points.
+  return false;
+}
+
+var tests = $("table#db tr");
+
+function submit_handler() {
+  // get score
+  var score = parseInt($("#score")[0].value.trim());
+  if (isNaN(score)) {
+    alert("No numeric score entered!");
+  } else if (test_selected == 0) {
+    alert("No test selected!");
+  } else {
+    var tds = $("td", tests[test_selected]);
+    for (var i = 0; i < tds.length; ++i) {
+      if (score > parseInt(tds[i].innerHTML.trim())) {
+        $("#result")[0].value = $("th", tests[0])[i].innerHTML;
+        break;
+      }
+    }
+  }
+  return false;
+}
+
+for (var i = 1; i < tests.length; ++i) {
+  var link = $("a", tests[i])[0];
+  $(link).bind("click", i, test_selection_handler);
+}
+var submit = $("button")[0];
+$(submit).bind("click", null, submit_handler);
+
+</script>

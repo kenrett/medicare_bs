@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130110204709) do
 
-
   create_table "gtests", :force => true do |t|
     t.string   "ch"
     t.string   "ci"

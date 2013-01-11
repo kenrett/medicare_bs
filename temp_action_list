@@ -1,0 +1,19 @@
+1. Get the Gtest.all into seeds.rb
+
+2. Create new view called whatever I want: index.html.erb  (9.38)
+
+(Instead of new.html.erb)
+
+3. Do it as a table, instead of a dropdown... Has a row for each test.
+
+4. Render the complete contents of the db into an html table
+
+5. Add a script tag to the erb that has javascript that will look at the whole table and construct
+
+Hook up the page so that if a user clicks on one of the tests, 
+
+the javascript needs to not only get the test names, but the ranges
+
+While building, have them showing on the page. once they're ready, style display: none
+
+js is also going to have to create the link AND the handler for those links
