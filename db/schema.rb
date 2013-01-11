@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130110204709) do
 
-  create_table "gcodes", :force => true do |t|
-    t.string   "test_name"
-    t.string   "modifier"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "gtests", :force => true do |t|
     t.string   "ch"
@@ -29,19 +23,6 @@ ActiveRecord::Schema.define(:version => 20130110204709) do
     t.string   "cm"
     t.string   "cn"
     t.string   "test_name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "tests", :force => true do |t|
-    t.string   "test_name"
-    t.string   "CH"
-    t.string   "CI"
-    t.string   "CJ"
-    t.string   "CK"
-    t.string   "CL"
-    t.string   "CM"
-    t.string   "CN"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
