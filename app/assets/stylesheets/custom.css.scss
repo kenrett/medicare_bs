@@ -18,8 +18,11 @@ html {
 
 body {
   padding-top: 60px;
-  padding-right: 25px;
-  padding-left: 15px;
+}
+
+#body {
+  padding: 10px;
+  padding-bottom: 60px;
 }
 
 section {
@@ -57,6 +60,13 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: $grayLight;
+}
+
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
 }
 
 p {
@@ -175,3 +185,53 @@ input {
   @extend .control-group;
   @extend .error;
  }
+
+ /* table */
+
+#db {
+ float: left;
+ margin-left: 12em;
+ margin-right: 8em;
+
+  th {
+    
+    background-color: #eaeaea;
+      
+    &:hover { 
+      color: $grayDarker;
+    }  
+  }
+}
+
+/* input boxes */
+
+#score {
+  width: 8em;
+
+}
+
+#result {
+  width: 4em;
+  margin-left: 1.05em;
+}
+
+/* submit button */
+
+#submit {
+  margin-left: 5.1em;
+}
+
+/* gcode static page */
+
+#wrap {
+   width:700px;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:300px;
+}
+#right_col {
+   float:right;
+   width:300px;
+}

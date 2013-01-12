@@ -14,5 +14,8 @@ class StaticPagesController < ApplicationController
 
   def gtests
   end
+
+  def gcodes
+  end
   
 end

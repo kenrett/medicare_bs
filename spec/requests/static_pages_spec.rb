@@ -32,4 +32,11 @@ describe "Static pages" do
     it { should have_selector('h1',    text: 'Contact') }
     it { should have_selector('title', text: full_title('Contact')) }
   end
+
+  describe "Gcodes page" do
+    before { visit gcodes_path }
+
+    it { should have_selector('h1',    text: 'Gcodes') }
+    it { should have_selector('title', text: full_title('Gcodes')) }
+  end
 end

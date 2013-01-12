@@ -4,7 +4,7 @@
   display:none
 }
 </style>
-<h1>All gtests</h1>
+<h1>Select your test</h1>
 
 <table id=db border=1>
   <tr>
@@ -32,26 +32,28 @@
 <% end %>
 
 </table>
+<br>
 
-<hr>
 
-Score:
-<input id=score type=text></input>
+Score: <input type=text id=score></input>
+<br>
 <button id=submit>Submit</button>
-
-<hr>
+<br>
+<br>
+<br>
 
 Modifier: <input type=text id=result readonly></input>
 
-<hr>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
 <script>
+
 var test_selected = 0;
 function test_selection_handler(event) {
   test_selected = event.data;
-  // Returning false cancels event propagation, so the browser will not
-  // try to go to "#" or wherever href points.
+  /* Returning false cancels event propagation, so the browser will not
+   try to go to "#" or wherever href points. */
   return false;
 }
 
