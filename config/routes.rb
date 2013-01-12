@@ -6,7 +6,6 @@ MedicareBs::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  match '/gtests',  to: 'gtests#new'
   match '/gtests2', to: 'gtests#index'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
