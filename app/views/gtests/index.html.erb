@@ -63,6 +63,7 @@ function test_selection_handler(event) {
   // Clear score and modifier
   $("#score")[0].value = "";
   $("#result")[0].value = "";
+  $("#score")[0].focus();
 
   // Returning false cancels event propagation, so the browser will not
   // try to go to "#" or wherever href points.
