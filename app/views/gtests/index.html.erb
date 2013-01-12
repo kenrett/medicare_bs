@@ -60,6 +60,10 @@ function test_selection_handler(event) {
   // Set bold for currently selected test.
   $("td", tests[test_selected])[0].style.fontWeight = "bold";
 
+  // Clear score and modifier
+  $("#score")[0].value = "";
+  $("#result")[0].value = "";
+
   // Returning false cancels event propagation, so the browser will not
   // try to go to "#" or wherever href points.
   return false;
