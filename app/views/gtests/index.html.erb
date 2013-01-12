@@ -47,15 +47,23 @@ Modifier: <input type=text id=result readonly></input>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
+var tests = $("table#db tr");
+
 var test_selected = 0;
 function test_selection_handler(event) {
   test_selected = event.data;
+
+  // Clear bolding for all current tests.
+  for (var i = 1; i < tests.length; ++i) {
+    $("td", tests[i])[0].style.fontWeight = "normal";
+  }
+  // Set bold for currently selected test.
+  $("td", tests[test_selected])[0].style.fontWeight = "bold";
+
   // Returning false cancels event propagation, so the browser will not
   // try to go to "#" or wherever href points.
   return false;
 }
-
-var tests = $("table#db tr");
 
 function submit_handler() {
   // get score
